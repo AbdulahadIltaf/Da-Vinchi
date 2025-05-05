@@ -1,0 +1,144 @@
+[
+  {
+    "test_name": "Valid Request",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Dimensions (Not Divisible by 8)",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 215,
+      "height": 200,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Dimensions (Exceeds 720p)",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 1920,
+      "height": 1080,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Steps",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 512,
+      "steps": 150,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Guidance Scale",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 25.0,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Dtype",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float64"
+    }
+  },
+  {
+    "test_name": "Missing Prompt",
+    "request": {
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Edge Case - Minimum Dimensions",
+    "request": {
+      "prompt": "A small flower",
+      "width": 64,
+      "height": 64,
+      "steps": 10,
+      "guidance": 5.0,
+      "dtype": "float32"
+    }
+  },
+  {
+    "test_name": "Edge Case - Maximum Dimensions (720p)",
+    "request": {
+      "prompt": "A large mountain",
+      "width": 1280,
+      "height": 720,
+      "steps": 100,
+      "guidance": 10.0,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Valid Request with Different Prompt",
+    "request": {
+      "prompt": "A forest in the morning mist",
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Width (Not Divisible by 8)",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 510,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Invalid Height (Exceeds 1024)",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 2048,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  },
+  {
+    "test_name": "Concurrent Requests (More than 3)",
+    "request": {
+      "prompt": "A sunset over the ocean",
+      "width": 512,
+      "height": 512,
+      "steps": 50,
+      "guidance": 7.5,
+      "dtype": "float16"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service TextToImage {
+  rpc GenerateImage (ImageRequest) returns (ImageResponse);
+}
+
+message ImageRequest {
+  string prompt = 1;
+  int32 width = 2;
+  int32 height = 3;
+  int32 steps = 4;
+  float guidance = 5;
+  string dtype = 6;
+}
+
+message ImageResponse {
+  string base64_image = 1;  // Base64-encoded image data
+  string status = 2;        // Status of the request (e.g., "success" or "error")
+  string message = 3;       // Error or success message
+}
